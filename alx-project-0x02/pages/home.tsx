@@ -1,4 +1,5 @@
 import Card from "@/components/common/Card"
+import PostModal from "@/components/common/PostModal"
 import {CardProps} from "@/interfaces"
 const data = [
     {
@@ -18,13 +19,15 @@ const data = [
 const home: React.FC =()=>{
 
     return(
-        <div className="m-3">
+        <div className="m-3 ">
             <h1 className="mb-2">Welcome to the <span className="text-green-500">home</span> page</h1>
-            <div className="list grid grid-cols-4 gap-2">
+            <button className="bg-blue-400 rounded p-1 text-black font-bold mb-2">Add post</button>
+            <div className="list grid grid-cols-4 gap-2 mb-3">
                 {data.map(({title, content} : CardProps , key : number) =>
                     <Card key={key} title = {title} content= {content} />
                 )}
             </div>
+            <PostModal/>
         </div>
     )
 }
