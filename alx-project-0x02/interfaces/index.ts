@@ -1,4 +1,5 @@
 
-export interface props{
-    Empty : string;
+export interface CardProps{
+    title : string;
+    content : string;
 }
