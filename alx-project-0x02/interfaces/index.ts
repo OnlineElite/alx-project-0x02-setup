@@ -1,5 +1,5 @@
 
 export interface CardProps{
-    title : string,
-    content : string
+    title: string;
+    content: string;
 }
