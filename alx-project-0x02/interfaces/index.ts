@@ -21,3 +21,14 @@ export interface PostProps{
     content : string;
     userId : number;
 }
+
+export interface address{
+    city : string;
+    street : string;
+}
+
+export interface UserProps {
+    name : string;
+    email : string;
+    address : address;
+}

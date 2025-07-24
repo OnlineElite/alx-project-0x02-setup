@@ -23,13 +23,13 @@ export const getStaticProps  = async () => {
         const res = await fetch('https://jsonplaceholder.typicode.com/posts');
         const data: PostProps[] = await res.json();
         return {
-            props: {posts: data.slice(0, 20)}  // only the first 10
-        };
-  } catch (error) {
+            props: {posts: data.slice(0, 20)}  // only the first 20 posts
+        }
+    } catch (error) {
         return {
             props: { posts: [] }
-        };
-  }
-};
+        }
+    }
+}
 
 export default Posts;
