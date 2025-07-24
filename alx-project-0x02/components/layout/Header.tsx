@@ -19,11 +19,14 @@ const Header : React.FC =()=>{
             <section className="navbar bg-gray-200 shadow-md flex justify-center items-center py-2">
                 <nav>
                     <ul className="flex justify-center items-center">
-                        <Link href="/about">
-                            <li className="font-bold text-blue-400 px-3 mx-1 rounded-xl py-1 bg-white hover:text-blue-600 hover:bg-blue-100 ">About</li>
-                        </Link>
                         <Link href="/home">
                             <li className="font-bold text-blue-400 px-3 mx-1 rounded-xl py-1 bg-white hover:text-blue-600 hover:bg-blue-100 ">Home</li>
+                        </Link>
+                        <Link href="/posts">
+                            <li className="font-bold text-blue-400 px-3 mx-1 rounded-xl py-1 bg-white hover:text-blue-600 hover:bg-blue-100 ">Posts</li>
+                        </Link>
+                        <Link href="/about">
+                            <li className="font-bold text-blue-400 px-3 mx-1 rounded-xl py-1 bg-white hover:text-blue-600 hover:bg-blue-100 ">About</li>
                         </Link>
                     </ul>
                 </nav>

@@ -1,5 +1,6 @@
 import Card from "@/components/common/Card"
 import PostModal from "@/components/common/PostModal"
+import Header from "@/components/layout/Header"
 import {useState} from "react"
 import {CardProps} from "@/interfaces"
 
@@ -30,15 +31,18 @@ const Home: React.FC =()=>{
     }
 
     return(
-        <div className="m-3 ">
-            <h1 className="mb-2">Welcome to the <span className="text-green-500">home</span> page</h1>
-            <button className="bg-blue-400 rounded p-1 text-black font-bold mb-2" onClick={handleModal} >Add post</button>
-            <div className="list grid grid-cols-4 gap-2 mb-3">
-                {posts.map(({title, content} : CardProps , key : number) =>
-                    <Card key={key} title = {title} content= {content} />
-                )}
+        <div className=" ">
+            <Header/>
+            <div className="m-3">
+                <h1 className="mb-2">Welcome to the <span className="text-green-500">home</span> page</h1>
+                <button className="bg-blue-400 rounded p-1 text-black font-bold mb-2" onClick={handleModal} >Add post</button>
+                <div className="list grid grid-cols-4 gap-2 mb-3">
+                    {posts.map(({title, content} : CardProps , key : number) =>
+                        <Card key={key} title = {title} content= {content} />
+                    )}
+                </div>
+                <PostModal isOpen={isModalOpen} onClose={()=> setIsModalOpen(false)} onSubmit={handleAddPost} />
             </div>
-            <PostModal isOpen={isModalOpen} onClose={()=> setIsModalOpen(false)} onSubmit={handleAddPost} />
         </div>
     )
 }
