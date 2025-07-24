@@ -12,8 +12,8 @@ const Header : React.FC =()=>{
                     <input className="rounded-2xl px-2 py-1 w-full" type="text" placeholder="Search" />
                 </div>
                 <div className="actions flex justify-between items-center">
-                    <Button size="md" shape="rounded-md" text="Log in"/>
-                    <Button size="md" shape="rounded-md" text="Sign in"/>
+                    <Button size="medium" shape="rounded-md" text="Log in"/>
+                    <Button size="medium" shape="rounded-md" text="Sign in"/>
                 </div>
             </section>
             <section className="navbar bg-gray-200 shadow-md flex justify-center items-center py-2">
